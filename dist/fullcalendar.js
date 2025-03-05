@@ -14300,6 +14300,9 @@ var ListEventRenderer = /** @class */ (function (_super) {
         if (url) {
             classes.push('fc-has-url');
         }
+        if(timeHtml == "12:00am - 12:00am"){
+			timeHtml = view.getAllDayHtml();
+		}
         return '<tr class="' + classes.join(' ') + '">' +
             (this.displayEventTime ?
                 '<td class="fc-list-item-time ' + theme.getClass('widgetContent') + '">' +
