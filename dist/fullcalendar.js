@@ -14285,7 +14285,7 @@ var ListEventRenderer = /** @class */ (function (_super) {
         if (componentFootprint.isAllDay) {
             timeHtml = view.getAllDayHtml();
         }
-        else if (view.isMultiDayRange(componentFootprint.unzonedRange)) {
+        else if (view.isMultiDayRange(eventDef.dateProfile.unzonedRange)) {
             if (seg.isStart || seg.isEnd) { // outer segment that probably lasts part of the day
                 timeHtml = util_1.htmlEscape(this._getTimeText(calendar.msToMoment(seg.startMs), calendar.msToMoment(seg.endMs), componentFootprint.isAllDay));
             }
